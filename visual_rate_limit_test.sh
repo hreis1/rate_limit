@@ -40,6 +40,7 @@ echo -e "\n>> Teste 3: Teste de carga com wrk - 5 segundos, 10 conexões"
 echo "   (Muitas requisições serão bloqueadas)"
 echo "   ------------------------------------------------------"
 
+sleep 1
 wrk -t2 -c10 -d5s --latency http://localhost:9999/
 
 echo -e "\n===== Teste de Rate Limiting Concluído ====="
