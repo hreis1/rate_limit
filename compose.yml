@@ -5,6 +5,7 @@ services:
     image: ruby:3.2
     volumes:
       - .:/app
+      - ./bundle:/usr/local/bundle
     working_dir: /app
     command: bash -c "bundle install && ruby app.rb -p 3000 -o 0.0.0.0"
     ports:
